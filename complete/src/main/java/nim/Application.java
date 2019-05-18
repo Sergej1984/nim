@@ -55,7 +55,7 @@ public class Application {
 
                 Move compAnswer = takeMatches(restTemplate, matchesOnTable, userInput);
                 if (compAnswer.getException() != null) {
-                    System.out.println(compAnswer.getException().getMessage());
+                    System.out.println(compAnswer.getException());
                 } else {
                     matchesOnTable = compAnswer.getMatchesOnTable();
                     System.out.println("Computer took " + compAnswer.getTakenMatches() + " matches.\n");

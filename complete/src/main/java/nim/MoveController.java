@@ -21,8 +21,7 @@ public class MoveController {
 
         String validationResult = userInputValidation(matchesLeftAfterPlayer, matchesTaken);
         if (validationResult != null) {
-            return new Move(counter.incrementAndGet(), matchesLeftAfterPlayer, matchesTaken,
-                    new Exception(validationResult));
+            return new Move(counter.incrementAndGet(), matchesLeftAfterPlayer, matchesTaken, validationResult);
         }
 
         int takenByComp = compTakeMatches(matchesLeftAfterPlayer);

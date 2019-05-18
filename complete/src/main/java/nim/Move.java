@@ -8,9 +8,9 @@ public class Move {
     private final long id;
     private final int matchesOnTable;
     private final int takenMatches;
-    private final Exception exception; // TODO look for a better concept
+    private final String exception;
 
-    public Move(long id, int matchesOnTable, int takenMatches, Exception exception) {
+    public Move(long id, int matchesOnTable, int takenMatches, String exception) {
         this.id = id;
         this.matchesOnTable = matchesOnTable;
         this.takenMatches = takenMatches;
@@ -29,7 +29,7 @@ public class Move {
         return takenMatches;
     }
 
-    public Exception getException() {
+    public String getException() {
         return exception;
     }
 
